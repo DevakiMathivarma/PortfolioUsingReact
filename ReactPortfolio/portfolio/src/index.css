@@ -1,0 +1,23 @@
+/* Project global CSS (keeps original look) */
+@import "./assets/original.css";
+
+/* small resets / helpers for React app */
+html, body, #root {
+  height: 100%;
+}
+
+/* utility to visually hide element but keep it accessible */
+.visually-hidden {
+  position: absolute !important;
+  height: 1px; width: 1px;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+  white-space: nowrap;
+}
+
+/* animations fallback container spacing when module animations used */
+.app-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}

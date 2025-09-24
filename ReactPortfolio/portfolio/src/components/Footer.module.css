@@ -1,0 +1,13 @@
+.footer {
+  background: transparent; /* original CSS handles background */
+  padding: 18px;
+  border-top: 1px solid #eee;
+}
+
+.inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

@@ -1,0 +1,11 @@
+.menuToggle {
+  display: none;
+  /* keep in sync visually with original .menu-toggle if needed */
+}
+
+/* show toggle only on tiny screens (keep consistent with original CSS breakpoints) */
+@media (max-width: 480px) {
+  .menuToggle {
+    display: block;
+  }
+}
