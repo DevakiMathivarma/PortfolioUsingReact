@@ -21,25 +21,25 @@ export default function Projects() {
 
   // ---------- preview carousel variables (unchanged) ----------
   const eventImages = [
-    "/public/assets/images/event1.PNG",
-    "/public/assets/images/event2.PNG",
-    "/public/assets/images/event3.PNG",
-    "/public/assets/images/event4.PNG",
-    "/public/assets/images/event5.PNG",
+    "/event1.PNG",
+    "/event2.PNG",
+    "/event3.PNG",
+    "/event4.PNG",
+    "/event5.PNG",
   ];
   const groceryImages = [
-    "/public/assets/images/grhome.PNG",
-    "/public/assets/images/grshop.PNG",
-    "/public/assets/images/grshopping.PNG",
-    "/public/assets/images/graccount.PNG",
-    "/public/assets/images/grtrack.PNG",
+    "/grhome.PNG",
+    "/grshop.PNG",
+    "/grshopping.PNG",
+    "/graccount.PNG",
+    "/grtrack.PNG",
   ];
   const pepperfryImages = [
-    "/public/assets/images/p1.PNG",
-    "/public/assets/images/p2.PNG",
-    "/public/assets/images/p3.PNG",
-    "/public/assets/images/p4.PNG",
-    "/public/assets/images/p5.PNG",
+    "/p1.PNG",
+    "/p2.PNG",
+    "/p3.PNG",
+    "/p4.PNG",
+    "/p5.PNG",
   ];
 
   const [currentCarousel, setCurrentCarousel] = useState("event");
