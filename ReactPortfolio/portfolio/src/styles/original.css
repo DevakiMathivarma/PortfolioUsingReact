@@ -7,7 +7,7 @@
 body, html {
   font-family: 'Segoe UI', sans-serif;
   height: 100%;
-  overflow-x: hidden;
+  overflow: hidden;
 }
 
 
@@ -99,7 +99,7 @@ body, html {
 
 .main-content {
   margin-left: 250px;
-
+  overflow-y: auto;
   height: 100vh;
   width: calc(100% - 250px);
 }
@@ -114,7 +114,6 @@ body, html {
   /* color: white; */
   text-align: center;
   padding: 20px;
-  margin: 10px;
 }
 
 .hero p {
@@ -746,128 +745,3 @@ display:block;
   min-width: 280px;
 }
 } 
-/* Projects grid: 3 per row, centered, responsive */
-.projects-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr); /* 3 columns on desktop */
-  gap: 20px;
-  max-width: 1200px;    /* center container width */
-  margin: 0 auto 24px;  /* center horizontally and add bottom spacing */
-  padding: 0 16px;      /* small side padding on small screens */
-  box-sizing: border-box;
-}
-
-/* make sure each tile stretches to fill column */
-.project-tile {
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-}
-
-/* responsive breakpoints */
-@media (max-width: 900px) {
-  .projects-grid {
-    grid-template-columns: repeat(2, 1fr); /* 2 columns on tablet */
-    max-width: 900px;
-  }
-}
-
-@media (max-width: 600px) {
-  .projects-grid {
-    grid-template-columns: 1fr; /* 1 column on narrow screens */
-    max-width: 420px;
-    padding: 0 12px;
-  }
-}
-/* ---------- Hero animations (append to your CSS) ---------- */
-
-/* main fade + slide in used by headline, subtitle and paragraph */
-@keyframes hero-fade-up {
-  0%   { opacity: 0; transform: translateY(18px); }
-  60%  { opacity: 1; transform: translateY(-6px); }
-  100% { opacity: 1; transform: translateY(0); }
-}
-
-/* subtle color / glow pulse for highlighted span */
-@keyframes hero-highlight-pulse {
-  0%   { filter: drop-shadow(0 0 0 rgba(0,0,0,0)); }
-  50%  { filter: drop-shadow(0 6px 22px rgba(16,201,143,0.12)); transform: translateY(-2px) scale(1.01); }
-  100% { filter: drop-shadow(0 0 0 rgba(0,0,0,0)); transform: translateY(0) scale(1); }
-}
-
-/* underline grow from center */
-@keyframes hero-underline-grow {
-  0%   { transform: scaleX(0); transform-origin: center; opacity: 0; }
-  60%  { transform: scaleX(1.05); opacity: 1; }
-  100% { transform: scaleX(1); opacity: 1; }
-}
-
-/* tiny bounce for the underline after reveal */
-@keyframes hero-underline-bounce {
-  0%   { transform: translateY(0); }
-  50%  { transform: translateY(-6px); }
-  100% { transform: translateY(0); }
-}
-
-/* staggered animation delays for nicer entrance */
-.hero h1 {
-  display: inline-block; /* preserve inline layout and let transform look crisp */
-  opacity: 0;
-  transform: translateY(18px);
-  animation: hero-fade-up 900ms cubic-bezier(.22,.9,.29,1) 160ms both;
-  will-change: transform, opacity;
-}
-
-/* highlighted bit inside hero heading */
-.hero h1 span {
-  display: inline-block;
-  animation: hero-highlight-pulse 2200ms ease-in-out 520ms both;
-  /* keep the original green color; only add subtle glow */
-}
-
-/* underline reveal below heading (uses the existing .underline element) */
-.hero .underline {
-  transform-origin: center;
-  opacity: 0;
-  transform: scaleX(0);
-  animation: hero-underline-grow 520ms cubic-bezier(.2,.9,.25,1) 900ms both,
-             hero-underline-bounce 900ms cubic-bezier(.2,.9,.25,1) 1550ms both;
-}
-
-/* subtitle / description fade-in, staggered a bit later */
-.hero p,
-.hero h3 {
-  opacity: 0;
-  transform: translateY(12px);
-  animation: hero-fade-up 760ms cubic-bezier(.22,.9,.29,1) 420ms both;
-}
-
-/* make heading feel more dynamic by slightly animating letter-spacing on entry */
-.hero h1 {
-  transition: letter-spacing 420ms ease;
-}
-.hero h1.animate-wide {
-  letter-spacing: 0.6px;
-}
-
-/* small decorative accent on the underline (keeps original colour) */
-.hero .underline {
-  background-color: #00c896; /* unchanged */
-  height: 4px;               /* keeps thickness noticeable */
-  border-radius: 3px;
-  margin-top: 10px;
-}
-
-/* Accessibility: respect reduced motion preferences */
-@media (prefers-reduced-motion: reduce) {
-  .hero h1,
-  .hero h1 span,
-  .hero .underline,
-  .hero p,
-  .hero h3 {
-    animation: none !important;
-    transition: none !important;
-    transform: none !important;
-    opacity: 1 !important;
-  }
-}

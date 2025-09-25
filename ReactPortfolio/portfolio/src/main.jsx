@@ -3,8 +3,8 @@ import React from "react";
 import { createRoot } from "react-dom/client";
 import { BrowserRouter } from "react-router-dom";
 import App from "./App";
-import "./index.css";
-import "./assets/original.css"; // keep your original CSS file here (exact copy)
+
+import "./styles/original.css"; // keep your original CSS file here (exact copy)
 
 createRoot(document.getElementById("root")).render(
   <React.StrictMode>

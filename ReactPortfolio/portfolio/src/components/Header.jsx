@@ -138,7 +138,7 @@ export default function Header() {
         aria-label="Primary"
       >
         <div className="profile">
-          <img src="/src/assets/images/devaki.jpeg" alt="Devaki" />
+          <img src="/devaki.jpeg" alt="Devaki" />
           <h2>Devaki Mathivarma</h2>
           <h4>A Python Full Stack Developer</h4>
         </div>

@@ -21,25 +21,25 @@ export default function Projects() {
 
   // ---------- preview carousel variables (unchanged) ----------
   const eventImages = [
-    "/src/assets/images/event1.PNG",
-    "/src/assets/images/event2.PNG",
-    "/src/assets/images/event3.PNG",
-    "/src/assets/images/event4.PNG",
-    "/src/assets/images/event5.PNG",
+    "/public/assets/images/event1.PNG",
+    "/public/assets/images/event2.PNG",
+    "/public/assets/images/event3.PNG",
+    "/public/assets/images/event4.PNG",
+    "/public/assets/images/event5.PNG",
   ];
   const groceryImages = [
-    "/src/assets/images/grhome.PNG",
-    "/src/assets/images/grshop.PNG",
-    "/src/assets/images/grshopping.PNG",
-    "/src/assets/images/graccount.PNG",
-    "/src/assets/images/grtrack.PNG",
+    "/public/assets/images/grhome.PNG",
+    "/public/assets/images/grshop.PNG",
+    "/public/assets/images/grshopping.PNG",
+    "/public/assets/images/graccount.PNG",
+    "/public/assets/images/grtrack.PNG",
   ];
   const pepperfryImages = [
-    "/src/assets/images/p1.PNG",
-    "/src/assets/images/p2.PNG",
-    "/src/assets/images/p3.PNG",
-    "/src/assets/images/p4.PNG",
-    "/src/assets/images/p5.PNG",
+    "/public/assets/images/p1.PNG",
+    "/public/assets/images/p2.PNG",
+    "/public/assets/images/p3.PNG",
+    "/public/assets/images/p4.PNG",
+    "/public/assets/images/p5.PNG",
   ];
 
   const [currentCarousel, setCurrentCarousel] = useState("event");
